@@ -11,7 +11,7 @@ let app = express();
 app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({extended:false}));
 //createing the port for app to listen to
-let port = process.env.Port || 4000;
+let port = process.env.PORT || 4000;
 //connecting to the mongodb server with mongoose
 
 //placing the user and the admin router to the main server app.use()

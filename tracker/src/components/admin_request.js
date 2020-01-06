@@ -63,9 +63,9 @@ export function Admin_req({request,setallreq}){
             })()
          },[reject,accept,resolve])
     return(
-        <div className="col-sm-12">
+        <div className="col-sm-12 rm-padding-lr">
             <div className="panel panel-default">
-                    <div className="panel-heading ">
+                    <div className="panel-heading trm-padding-lr">
                         <span> <b> {request.user && request.user.username}</b>  {request && request.date} </span>
                         <span className="pull-right">
                             {request.request_status == "pending"&&<button className=" text-danger req-btn" id="reject" onClick={onreject}>Reject</button>}

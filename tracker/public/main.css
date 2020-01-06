@@ -101,6 +101,10 @@ html,body{
     padding: 10px 15px;
     border:1px;
 }
+.trm-padding-lr{
+    padding-left: 5px;
+    padding-right:5px;
+}
 .rm-borderline{
   border-left-color: white;
   border-top-color: white;
