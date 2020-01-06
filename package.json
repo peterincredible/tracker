@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "client":"npm start --prefix tracker",
+    "server":"nodemon app.js",
+    "dev":"concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix tracker && npm run build --prefix tracker "
+
+
   },
   "keywords": [],
   "author": "",

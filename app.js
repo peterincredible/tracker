@@ -24,7 +24,7 @@ if(process.env.NODE_ENV = "productuon"){
     })
 }
 if(process.env.PORT){
-mongoose.connect('mongodb://localhost/management_tracker', {useNewUrlParser: true});
+mongoose.connect('mongodb://peterincredible:omolola3@ds259878.mlab.com:59878/heroku_0gsh3892', {useNewUrlParser: true});
 }else{
     
 mongoose.connect('mongodb://localhost/management_tracker', {useNewUrlParser: true});
