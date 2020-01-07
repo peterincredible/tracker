@@ -11,7 +11,7 @@ function Admin_p_r(props){
     let height = 160;
     let tempreq = request.length > 0 ?request.map((data,i)=>
     ({...data,y:height * i})) : request;
-    let transition = useTransition(tempreq,req=>req._id,{from:{x:50,position:"absolute",opacity:0,width:"90%"},
+    let transition = useTransition(tempreq,req=>req._id,{from:{x:50,position:"absolute",opacity:0,width:"100%",marginLeft:"auto",marginRight:"auto",left:0,right:0},
         enter:({y})=>({y,x:0,opacity:1}),
         leave:{opacity:0,x:-50},
         update:({y})=>({y})
@@ -30,11 +30,12 @@ function Admin_p_r(props){
 
     return (
         <div className="row">
-            <div className="col-sm-6 col-sm-offset-3 ">
-                <h1 className="text-center"> Pending Requests <span>{<NavLink to="/admin" className="btn btn-primary">Back to Admin</NavLink>}</span></h1>
+            <div className="col-sm-6 col-sm-offset-3 rm-padding-lr" >
+                 <h1 className="text-center" > Pending Requests <span>{<NavLink to="/admin" className="btn btn-primary">Back to Admin</NavLink>}</span></h1>
+            </div>
+            <div className="col-sm-6 col-sm-offset-3">
                 {request.length > 0 ?
-                transition.map(({ item, props:{y,x,...rest}, key }) =>
-                                    
+                transition.map(({ item, props:{y,x,...rest}, key }) =>            
                     <animated.div key={key} style={{...rest,transform:interpolate([y,x],(y,x)=>`translate3d(${x}px,${y}px,0)`)}}>
                         <Admin_req request={item} setallreq={setrequest}/>
                     </animated.div>

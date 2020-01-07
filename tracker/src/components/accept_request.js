@@ -27,7 +27,7 @@ function Accept_request(props){
     },[tempreq])
     return (
         <div className="row">
-        <div className="col-sm-6 col-sm-offset-6 ">
+        <div className="col-sm-8 col-sm-offset-2 ">
             <h1 className="text-center"> Accepted Requests</h1>
             {tempreq.length > 0 ?
                  /*tempreq.map((req,i)=><Request request={req} key={i}/>)*/

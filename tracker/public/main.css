@@ -120,7 +120,8 @@ html,body{
     overflow-y: scroll;
 }
 .req-btn{
-    margin-right:5px;
+    margin-right:2px;
+    
 }
 .req-btn:hover{
     text-decoration-line: none;
@@ -146,10 +147,20 @@ html,body{
     border:none;
     margin-top:2px;
 }
+.xs-rm-padding-lr{
+    
+}
+.xs-full-width{
+
+}
    
 
-@media (min-width:764px){
-   .flex-c{
-   
-   } 
+@media (min-width:320px){
+    .xs-rm-padding-lr{
+        padding-left: 0;
+        padding-right:0;
+  }
+  .xs-full-width{
+    width:100% !important;
+}
 }

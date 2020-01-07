@@ -10,7 +10,7 @@ function Admin(props){
      let height = 160;
      let tempreq = allreq.length > 0 ?allreq.filter((data)=>data.request_status == "pending").slice(0,4).map((data,i)=>
      ({...data,y:height * i,delay:`${i *300}ms`})) : allreq;
-     let Transitions= useTransition(tempreq,req=>req._id,{from:{x:50,opacity:0,width:"90%",position:"absolute"} ,
+     let Transitions= useTransition(tempreq,req=>req._id,{from:{x:50,opacity:0,width:"100%",position:"absolute"} ,
      enter: ({y})=>({x:0,opacity:1,y}),
      leave: {x:-50,opacity:0},
      update:({y})=>({y})
@@ -47,11 +47,11 @@ function Admin(props){
                                 </div>
                         </div>
                     </div>
-                      <div className="col-sm-8 mk-relative full-height ">
+                      <div className="col-sm-8  full-height xs-rm-padding-lr">
                             <h1 className="rm-margin-tb text-center ">Recent Request</h1>
                            {Transitions.map(({ item, props:{y,x,...rest}, key }) =>
                                     
-                                    <animated.div key={key} style={{...rest,transform:interpolate([y,x],(y,x)=>`translate3d(${x}px,${y}px,0)`)}}>
+                                    <animated.div key={key} style={{...rest,transform:interpolate([y,x],(y,x)=>`translate3d(${x}px,${y}px,0)`)}} className="">
                                         <Admin_req request={item} setallreq={setallreq}/>
                                     </animated.div>
                                 
