@@ -47,7 +47,7 @@ function Admin(props){
                                 </div>
                         </div>
                     </div>
-                      <div className="col-sm-8  full-height xs-rm-padding-lr">
+                      <div className="col-sm-8 full-height xs-rm-padding-lr">
                             <h1 className="rm-margin-tb text-center ">Recent Request</h1>
                            {Transitions.map(({ item, props:{y,x,...rest}, key }) =>
                                     
